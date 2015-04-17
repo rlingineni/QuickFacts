@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<link rel="stylesheet" href="index.css" />
+	<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow'>
+	
+    <head>
+		 
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+		<div id="desc">
+			
+			<h > Quick Science Facts  </h>
+			
+		</div>
+		
+		<div class="facts">
+			<h1 id="fact">fact</h1>
+			<a href="#" onclick="nextfact()">Next</a>
+		</div>
+         
+		<script type="text/javascript">
+			
+			var facts = [
+				"Magma is the hot liquid rock under the surface of the Earth, it is known as lava after it comes out of a volcano",
+
+"Natural gas doesn't have an odour, strong smells are added to it by humans so it can be detected when there are leaks",
+
+"Hawaii is moving towards Japan at the speed of 10cm a year. This is because they are on different tectonic plates.",
+
+"Stretching out to an impressive length of 6696 kilometres (4160 miles) long, the Nile River is the longest river on earth.",
+
+"The word water usually refers to water in its liquid state. The solid state of water is known as ice while the gas state of water is known as steam or water vapor." ,
+				
+"Found in the Pacific Ocean, the Mariana Trench is the deepest known point in the world’s oceans.",
+				
+"Ocean tides are caused by the rotation of the Earth and the gravitational pull of the Moon and Sun acting on ocean water.",
+		
+"Born on July 5th 1996, Dolly the sheep was the first mammal to be cloned from an adult cell.",
+
+"When the DNA of an organism changes and results in a new trait (characteristic) it is known as mutation.",
+
+"French chemist and microbiologist Louis Pasteur was well known for inventing a process to stop various foods and liquids making people sick. Called Pasteurization, it reduces the amount of microorganisms that could lead to disease without having a noticeable effect on taste and quality in a way which methods such as sterilization might."
+						
+			];
+			
+
+			var factsContainer = document.getElementById('fact');
+			factsContainer.innerHTML = facts[Math.floor(Math.random() * facts.length)];
+
+			function nextfact() {
+				factsContainer.innerHTML = facts[Math.floor(Math.random() * facts.length)];
+			}
+		</script>
+
+
+    </body>
+</html>
